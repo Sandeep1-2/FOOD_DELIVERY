@@ -1,0 +1,16 @@
+.navbar{
+    padding: 20px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;  
+    margin-bottom: 2px;
+}
+.navbar .logo{
+    color: orangered;
+    font-size: 30px;
+}
+.navbar h4{
+    opacity: 0.6;
+    font-size: smaller;
+}

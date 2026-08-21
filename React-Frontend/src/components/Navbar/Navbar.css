@@ -1,0 +1,337 @@
+.navbar{
+    padding: 10px 0px;
+    padding-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: white; */
+}
+
+.navbar .logo{
+    color: orangered;
+    font-size: 30px;
+    cursor: pointer;
+}
+.navbar-menu{
+    list-style: none;
+    gap: 15px;
+    display: flex;
+    color: rgb(106, 103, 103);
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.navbar-right{
+    display: flex;
+    gap:20px;
+    font-size: 10px;
+}
+
+.navbar-right button{
+    cursor: pointer;
+    background-color: transparent;
+    padding: 10px 12px;
+    border-radius: 15px;
+    font-weight: 400;
+    color: orangered;
+    border: 2px solid orangered;
+    transition: 0.4s;
+}
+.navbar-right button:hover{
+    background-color: rgb(231, 218, 218);
+}
+.navbar-menu .active{
+    padding-bottom: 4px;
+    border-bottom: 2px solid black;
+    color: black;
+    font-weight: 600;
+}
+/* serach icon modifications css  */
+.search-icon{
+    cursor: pointer;
+}
+.search-box {
+    position: absolute;
+    top: 65px;
+    right: 80px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    padding: 12px;
+    width: 280px;
+    z-index: 1000;
+    animation: fadeIn 0.25s ease-in-out;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 14px;
+    transition: all 0.2s ease;
+  }
+  
+  .search-input:focus {
+    border-color: #ff4d4d; /* highlight color */
+    box-shadow: 0 0 6px rgba(255, 77, 77, 0.4);
+  }
+  
+  .suggestion-list {
+    margin-top: 10px;
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+  }
+  
+  .suggestion-item {
+    padding: 10px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+  
+  .suggestion-item:hover {
+    background-color: #f9f9f9;
+    color: #ff4d4d;
+    font-weight: 500;
+  }
+  
+  /* Subtle animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-8px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+.navbar-search-icon {
+    position: relative;
+    display: inline-block;
+  }
+  .navbar-search-icon img {
+    width: 30px;
+  } 
+  .navbar-search-icon .dot {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(50%, -50%);
+    min-width: 10px;
+    min-height: 10px;
+    background-color: orangered;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+/* .navbar-profile{
+    position: relative;
+    cursor: pointer;
+}
+.navbar-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+
+}
+.navbar-profile:hover .navbar-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    background-color: #fff2ef;
+    padding: 12px 22px;
+    border-radius: 4px;
+    border: 1px solid orangered;
+    outline: 2px solid white;
+    list-style: none;
+}
+.navbar-profile-dropdown img{
+    width: 20px;
+}
+.navbar-profile-dropdown li:hover{
+    color: orangered;
+}
+.navbar-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    gap: 10px;
+    font-size: 12px;
+    cursor: pointer;
+} */
+.navbar-profile {
+  position: relative;
+  cursor: pointer;
+}
+
+.navbar-profile-dropdown {
+  position: absolute;
+  right: 0;
+  top: 100%; 
+  display: none;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #fff2ef;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: 1px solid orangered;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  list-style: none;
+  min-width: 120px;
+}
+
+.navbar-profile:hover .navbar-profile-dropdown {
+  display: flex;
+}
+
+.navbar-profile-dropdown li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  color: black;
+  padding: 8px 4px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  border-radius: 4px;
+}
+
+/* Item hover effect */
+.navbar-profile-dropdown li:hover {
+  color: orangered;
+  background-color: #ffe5dc;
+}
+
+/* Dropdown icons */
+.navbar-profile-dropdown img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Optional: divider */
+.navbar-profile-dropdown hr {
+  border: none;
+  height: 1px;
+  background-color: #ccc;
+  margin: 4px 0;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width:1050px) {
+    .navbar .logo{
+        width: 140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }   
+    .navbar-right img{
+        width: 28px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+        font-size: 17px;
+    }
+    .search-box{
+        top: 55px;
+        right: 100px;
+        padding: 10px;
+        width: 250px;
+    }
+}
+@media (max-width:900px) {
+    .navbar .logo{
+        width: 120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 15px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }   
+    .navbar-right img{
+        width: 32px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+    .navbar-search-icon img {
+        width: 30px; 
+      }
+      .navbar-search-icon .dot {
+        width: 8px;
+        height: 8px;
+        top: 0;
+        right: 0;
+      } 
+      .search-box{
+        top: 55px;
+        right: 90px;
+        padding: 8px;
+        width: 200px;
+    }
+    
+}
+@media (max-width:750px) {
+    .navbar-menu{
+       display: none;
+    }  
+    .navbar-search-icon img {
+        width: 30px;
+      }
+      .navbar-search-icon .dot {
+        width: 8px;
+        height: 8px;
+        top: 0;
+        right: 0;
+      } 
+      .search-box{
+        top: 55px;
+        right: 90px;
+        padding: 6px;
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-search-icon img {
+      width: 30px;
+    }
+    .navbar-search-icon .dot {
+      width: 6px;
+      height: 6px;
+      top: 0;
+      right: 0;
+    }
+    .search-box{
+        top: 55px;
+        right: 40px;
+        padding: 5px;
+        width: 160px;
+    }
+  }
