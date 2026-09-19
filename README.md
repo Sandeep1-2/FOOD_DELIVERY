@@ -1,5 +1,10 @@
 # Food Delivery App
 
+## Deployed portals
+
+- **Customer storefront:** [https://food-delivery-1-ffz3.onrender.com/](https://food-delivery-1-ffz3.onrender.com/)
+- **Admin dashboard:** [https://food-delivery-admin-5phh.onrender.com/](https://food-delivery-admin-5phh.onrender.com/)
+
 A full-stack food ordering application with a customer storefront, an admin dashboard, and a REST API. Customers can browse food items, register, manage a cart, pay through Stripe Checkout, and track orders. Administrators can manage menu items and order statuses.
 
 ## Tech stack
